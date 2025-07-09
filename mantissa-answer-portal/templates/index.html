@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MantissaCombinatorics - Answer Lookup</title>
+  <style>
+    body { font-family: sans-serif; background: #f0f0f0; padding: 40px; max-width: 800px; margin: auto; }
+    h1 { color: #003366; }
+    select, button { padding: 10px; margin-top: 20px; width: 100%; font-size: 16px; }
+    .answer { background: #fff; padding: 20px; margin-top: 20px; border-left: 4px solid #007acc; }
+  </style>
+</head>
+<body>
+  <h1>MantissaCombinatorics: Answer Lookup</h1>
+  <form method="POST">
+    <label for="question">Select a Question:</label>
+    <select name="question" id="question">
+      <option value="1a">1a. Conditions Governing Workers’ Health Surveillance</option>
+      <option value="1b">1b. Accident Recording and Investigation System</option>
+      <option value="2a">2a. Risk Identification</option>
+      <option value="2b">2b. Risk Assessment</option>
+      <option value="2c">2c. Silicosis</option>
+      <option value="2d">2d. Asbestosis</option>
+      <option value="3a">3a. Occupational Infections</option>
+      <option value="3b">3b. Return-to-Work Health Assessment</option>
+      <option value="3c">3c. Monitoring Sickness Absence</option>
+      <option value="4a">4a. Ethical and Legal Issues in Workplace</option>
+      <option value="4b">4b. First Aid for Head and Eye Injuries</option>
+    </select>
+    <button type="submit">Show Answer</button>
+  </form>
+  {% if selected %}
+    <div class="answer">
+      <h3>Answer for {{ selected }}</h3>
+      <p>{{ answer }}</p>
+    </div>
+  {% endif %}
+</body>
+</html>
